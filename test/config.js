@@ -6,7 +6,7 @@ exports.config = {
 	allScriptsTimeout: 2000000,
 	capabilities: {
 		'browserName': 'chrome',
-		'browserstack.user': 'piomortazza@gmail.com',
+		'browserstack.user': 'giuseppemortazza',
 		'browserstack.local': true,
 		'browserstack.key': 'h9DWk1AcK8ygmtDwBezK'
 	},
