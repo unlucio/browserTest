@@ -11,6 +11,7 @@ before_script:
   - "npm start &"
   - "sleep 2"
   - "curl https://gist.github.com/mjumbewu/6040423/raw/browserstack_tunnel_setup.sh | bash"
+  - sleep 10
   - "ps -fA | grep node"
 script:
   - "protractor test/config.js"
