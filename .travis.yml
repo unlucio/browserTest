@@ -13,9 +13,13 @@ before_script:
   - "curl https://gist.github.com/mjumbewu/6040423/raw/browserstack_tunnel_setup.sh | bash"
   - sleep 10
   - "ps -fA | grep node"
+  - "ps -fA | grep browserstack_tunnel_setup"
+  - "bsPid=`ps -fA | grep browserstack_tunnel_setup | awk '{print $2}'`"
+  - "echo -e $bsPid"
 script:
   - "protractor test/config.js"
 after_script:
   - "ps -fA | grep node"
+  - "kill -9 $bsPid"
 notifications:
   email: unlucio@gmail.com
