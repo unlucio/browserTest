@@ -1,0 +1,20 @@
+language: node_js
+env:
+  global:
+    - BROWSERSTACK_ACCESS_KEY=h9DWk1AcK8ygmtDwBezK
+node_js:
+  - "0.10"
+before_install:
+  - npm install
+  - npm install protractor -g
+before_script:
+  - "curl https://gist.github.com/mjumbewu/6040423/raw/browserstack_tunnel_setup.sh | bash"
+  - "node tart &"
+  - "sleep 2"
+  - "ps -fA | grep node"
+script:
+  - "protractor test/config.js"
+after_script:
+  - "ps -fA | grep node"
+notifications:
+  email: unlucio@gmail.com
