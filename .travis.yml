@@ -8,9 +8,9 @@ before_install:
   - npm install
   - npm install protractor -g
 before_script:
-  - "curl https://gist.github.com/mjumbewu/6040423/raw/browserstack_tunnel_setup.sh | bash"
-  - "node start &"
+  - "npm start &"
   - "sleep 2"
+  - "curl https://gist.github.com/mjumbewu/6040423/raw/browserstack_tunnel_setup.sh | bash"
   - "ps -fA | grep node"
 script:
   - "protractor test/config.js"
