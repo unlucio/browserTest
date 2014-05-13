@@ -6,9 +6,11 @@ exports.config = {
 	allScriptsTimeout: 2000000,
 	capabilities: {
 		'browserName': 'chrome',
-		'browserstack.user': 'giuseppemortazza',
+		/*'browserstack.user': 'giuseppemortazza',*/
+		'browserstack.user': 'cirpo',
 		'browserstack.local': true,
-		'browserstack.key': 'h9DWk1AcK8ygmtDwBezK'
+		/*'browserstack.key': 'h9DWk1AcK8ygmtDwBezK'*/
+		'browserstack.key': 'yUCVHxXMQb7pAHTqpPqx'
 	},
 
 	suites: {
