@@ -10,7 +10,7 @@ install:
 before_script:
   - "npm start &"
   - "sleep 2"
-  - "./BrowserStackLocal.linux64 -v h9DWk1AcK8ygmtDwBezK localhost,8000,0 &"
+  - "./BrowserStackLocal -v h9DWk1AcK8ygmtDwBezK localhost,8000,0 &"
   - sleep 10
   - "ps -fA | grep node"
   - "ps -fA | grep BrowserStackLocal"
