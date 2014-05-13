@@ -13,7 +13,7 @@ function writeScreenShot(data, filename) {
 
 describe('checkout homepage', function () {
 	it('customer input elements are there', function () {
-		browser.driver.get('http://checkout.lucio.com:9003');
+		browser.driver.get('http://checkout.namdv.com:8000');
 		browser.takeScreenshot().then(function (png) {
 			writeScreenShot(png, 'shot.png');
 		});
